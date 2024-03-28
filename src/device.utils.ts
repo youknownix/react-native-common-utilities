@@ -71,9 +71,9 @@ export async function generate_current_device_details({}: {
 
   const deviceObj = {
     deviceId,
-    deviceType: "mobile",
+    deviceType: "mobile" as const,
     deviceName,
-    deviceOs: "ios",
+    deviceOs: Platform.OS,
     user: "",
     appVersion,
     fcmToken,
