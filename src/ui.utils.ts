@@ -38,26 +38,26 @@ export function fontProps(
 const getFontFamily = (fontWeight: FontWeight) => {
   switch (fontWeight) {
     case "100":
-      return getFontFamilyName(configFile.fontsbyWeight["100"]);
+      return getFontFamilyName(configFile.fonts.fontsByWeight["100"]);
     case "200":
-      return getFontFamilyName(configFile.fontsbyWeight["200"]);
+      return getFontFamilyName(configFile.fonts.fontsByWeight["200"]);
     case "300":
-      return getFontFamilyName(configFile.fontsbyWeight["300"]);
+      return getFontFamilyName(configFile.fonts.fontsByWeight["300"]);
     case "400":
-      return getFontFamilyName(configFile.fontsbyWeight["400"]);
+      return getFontFamilyName(configFile.fonts.fontsByWeight["400"]);
     case "500":
-      return getFontFamilyName(configFile.fontsbyWeight["500"]);
+      return getFontFamilyName(configFile.fonts.fontsByWeight["500"]);
     case "600":
-      return getFontFamilyName(configFile.fontsbyWeight["600"]);
+      return getFontFamilyName(configFile.fonts.fontsByWeight["600"]);
     case "700":
-      return getFontFamilyName(configFile.fontsbyWeight["700"]);
+      return getFontFamilyName(configFile.fonts.fontsByWeight["700"]);
     case "800":
-      return getFontFamilyName(configFile.fontsbyWeight["800"]);
+      return getFontFamilyName(configFile.fonts.fontsByWeight["800"]);
     case "900":
-      return getFontFamilyName(configFile.fontsbyWeight["900"]);
+      return getFontFamilyName(configFile.fonts.fontsByWeight["900"]);
 
     default:
-      return getFontFamilyName(configFile.fontsbyWeight["default"]);
+      return getFontFamilyName(configFile.fonts.fontsByWeight["default"]);
   }
 };
 
