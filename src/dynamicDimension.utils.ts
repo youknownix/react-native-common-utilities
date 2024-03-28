@@ -7,7 +7,7 @@ type SizeType = "width" | "height";
 
 // iphone 11 Pro Max
 const logicalWidth = 375;
-const logicalHeight = 812;
+const logicalHeight = 895;
 
 const xScale = ScreenWidth / logicalWidth;
 const yScale = ScreenHeight / logicalHeight;
@@ -50,6 +50,3 @@ export const STATUS_BAR_HEIGHT = StatusBar.currentHeight ?? 0;
 
 export const NATIVE_SCREEN_NAVIGATION_BAR_HEIGHT =
   SCREEN_HEIGHT - (WINDOW_HEIGHT + STATUS_BAR_HEIGHT);
-
-export const BOTTOM_TAB_NAVIGATOR_HEIGHT =
-  Platform.OS === "ios" ? AbsSize(90) : AbsSize(80);

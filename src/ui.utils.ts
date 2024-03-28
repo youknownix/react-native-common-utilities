@@ -1,3 +1,4 @@
+import { Platform } from "react-native";
 import { AbsSize, FontSize } from "./dynamicDimension.utils";
 import YAML from "yaml";
 
@@ -37,25 +38,37 @@ export function fontProps(
 const getFontFamily = (fontWeight: FontWeight) => {
   switch (fontWeight) {
     case "100":
-      return configFile.fontsbyWeight["100"];
+      return getFontFamilyName(configFile.fontsbyWeight["100"]);
     case "200":
-      return configFile.fontsbyWeight["200"];
+      return getFontFamilyName(configFile.fontsbyWeight["200"]);
     case "300":
-      return configFile.fontsbyWeight["300"];
+      return getFontFamilyName(configFile.fontsbyWeight["300"]);
     case "400":
-      return configFile.fontsbyWeight["400"];
+      return getFontFamilyName(configFile.fontsbyWeight["400"]);
     case "500":
-      return configFile.fontsbyWeight["500"];
+      return getFontFamilyName(configFile.fontsbyWeight["500"]);
     case "600":
-      return configFile.fontsbyWeight["600"];
+      return getFontFamilyName(configFile.fontsbyWeight["600"]);
     case "700":
-      return configFile.fontsbyWeight["700"];
+      return getFontFamilyName(configFile.fontsbyWeight["700"]);
     case "800":
-      return configFile.fontsbyWeight["800"];
+      return getFontFamilyName(configFile.fontsbyWeight["800"]);
     case "900":
-      return configFile.fontsbyWeight["900"];
+      return getFontFamilyName(configFile.fontsbyWeight["900"]);
 
     default:
-      return configFile.fontsbyWeight["default"];
+      return getFontFamilyName(configFile.fontsbyWeight["default"]);
   }
 };
+
+function getFontFamilyName(
+  fontNameObject: string | { android: string; ios: string }
+) {
+  if (typeof fontNameObject === "string") {
+    return fontNameObject;
+  }
+
+  return Platform.OS === "android"
+    ? fontNameObject.android
+    : fontNameObject.ios;
+}

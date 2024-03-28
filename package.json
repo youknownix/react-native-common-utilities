@@ -1,6 +1,6 @@
 {
   "name": "react-native-common-utilities",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "A set of common utility functions for your react-native applications",
   "license": "MIT",
   "author": "Nix",
